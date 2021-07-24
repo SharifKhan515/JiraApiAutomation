@@ -24,7 +24,7 @@ public class JiraApiTest {
 
 
           //add comment
-       String comment =  given().log().all().pathParam("id","TES-1").header("content-type","application/json").body("{\n" +
+       String comment =  given().relaxedHTTPSValidation().log().all().pathParam("id","TES-1").header("content-type","application/json").body("{\n" +
                 "    \"body\": \" Comment using Script 456\",\n" +
                 "    \"visibility\": {\n" +
                 "        \"type\": \"role\",\n" +
